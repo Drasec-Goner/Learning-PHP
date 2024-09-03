@@ -160,4 +160,58 @@
         echo "<br>";
     }
 ?>
+<!-- array pop -->
+<?php
+    $a = array("a"=>"Volvo","BMW","Toyota");
+    print_r(array_reverse($a, true));
+?>
 
+<!-- array search -->
+ <?php
+    $a=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow","e"=>"brown");
+    print_r(array_slice($a,1,2));
+
+    echo "<br>";
+
+    $a=array("red","green","blue","yellow","brown");
+    //print_r();
+    ?>
+
+ <?php
+    function sendmsg() {
+        echo "Hey there";
+    }   
+    sendmsg();
+    ?>
+
+<?php
+    function add(int $a, int $b) {
+        echo $a +$b;
+    }
+    //add(2, "3 semesters"); //error
+    ?>
+
+
+<?php
+    function addFloat(float $a, float $b) {
+        return (int)($a + $b);
+    }
+    echo addFloat(1.2,5.2);
+?>
+
+<?php
+    $a=array("a"=>"red","b"=>"green","c"=>"blue");
+    $b=array("1"=>"red","2"=>"green","3"=>"blue");
+    $c=($a+$b);
+    var_dump($c);
+    echo "<br>";
+    var_dump($a == $b);
+    echo "<br>";
+    var_dump($a === $b);
+    echo "<br>";
+    var_dump($a != $b);
+    echo "<br>";
+    var_dump($a !== $b);
+    echo "<br>";
+    var_dump($a <> $b);
+?>
