@@ -160,4 +160,117 @@
         echo "<br>";
     }
 ?>
+<!-- array pop -->
+<?php
+    $a = array("a"=>"Volvo","BMW","Toyota");
+    print_r(array_reverse($a, true));
+?>
+
+<!-- array search -->
+ <?php
+    $a=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow","e"=>"brown");
+    print_r(array_slice($a,1,2));
+
+    echo "<br>";
+
+    $a=array("red","green","blue","yellow","brown");
+    //print_r();
+    ?>
+
+ <?php
+    function sendmsg() {
+        echo "Hey there";
+    }   
+    sendmsg();
+    ?>
+
+<?php
+    function add(int $a, int $b) {
+        echo $a +$b;
+    }
+    //add(2, "3 semesters"); //error
+    ?>
+
+
+<?php
+    function addFloat(float $a, float $b) {
+        return (int)($a + $b);
+    }
+    echo addFloat(1.2,5.2);
+?>
+
+<?php
+    $a=array("a"=>"red","b"=>"green","c"=>"blue");
+    $b=array("1"=>"red","2"=>"green","3"=>"blue");
+    $c=($a+$b);
+    var_dump($c);
+    echo "<br>";
+    var_dump($a == $b);
+    echo "<br>";
+    var_dump($a === $b);
+    echo "<br>";
+    var_dump($a != $b);
+    echo "<br>";
+    var_dump($a !== $b);
+    echo "<br>";
+    var_dump($a <> $b);
+    echo "<br>";
+?>
+
+<!-- array count values -->
+<?php
+    $a=array("A","Cat","Dog","A","Dog");
+    print_r(array_count_values($a));
+
+?>
+
+<!-- array diff -->
+<?php
+    $a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+    $a2=array("e"=>"red","f"=>"green","g"=>"blue");
+    $result=array_diff($a1,$a2);
+    print_r($result);
+?>
+
+<!-- array flip -->
+<?php
+    $a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+    $result=array_flip($a1);
+    print_r($result);
+?>
+
+<!-- array_intersect -->
+<?php
+    $a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+    $a2=array("e"=>"red","f"=>"green","g"=>"blue");
+    $result=array_intersect($a1,$a2);
+    print_r($result);
+?>
+
+<!-- array push -->
+<?php
+    $a=array("red","green");
+    array_push($a,"blue","yellow");
+    print_r($a);
+?>
+
+<!-- array pop -->
+<?php
+    $a=array("red","green","blue");
+    array_pop($a);
+    print_r($a);
+?>
+
+<!-- array search -->
+<?php
+    $a=array("a"=>"red","b"=>"green","c"=>"blue");
+    echo array_search("red",$a);
+?>
+
+<!-- GEt third largest element in an unsorted array -->
+<?php
+    $a = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    rsort($a);
+    echo $a[2];
+?>
 
